@@ -1,6 +1,232 @@
 html *{
-    background-color: #FFF;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*Estilos Generales*/
+p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.54px;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, li{
+    list-style: none;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600; 
+}
+
+.wrap-cta{
+    display: flex;
+    width: 168px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.cta-a{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    background-color: #FCD437;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border-style: none;
+}
+
+.cta-a:hover{
+    background-color: #FCDB59;
+}
+
+h1{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+}
+
+h2{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600; 
+    letter-spacing: -1.2px;
+}
+
+h3{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.96px;
+}
+
+/*Estilos Header*/
+.header-landing{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: #FFF;
+}
+
+.wrap-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 160px;
+}
+
+.wrap-logo{
+    display: flex;
+    align-items: center;
+    flex-basis: 15%;
+}
+
+.logo-header{
+    width: 91px;
+    height: 75px;
+} 
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.wrap-nav-header{
+    display: flex;
+    flex-basis: 50%;
+}
+
+.main-menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-item{
+    margin: 16px;
+    display: flex;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    color: #FCD437;
+}
+
+.toggle-menu{
+    display: none;
+}
+
+.toggle-menu img{
+    width: 40px;
+}
+
+#check{
+    display: none;
+}
+
+@media (min-width:880px){
+    .wrap-header{
+        padding: 8px 160px;
+    }
+}
+
+@media (max-width:768px){
+    .wrap-header{
+        position: fixed;
+        height: 70px;
+        width: 100%;
+        background-color: #FFF;
+    }
+    .wrap-logo{
+        position: fixed;
+        top: 1%;
+        left: 3%;
+    }
+    .toggle-menu{
+        cursor: pointer;
+        display: flex;
+        background-color: #FFF;
+        border-radius: 12px;
+    }
+    .toggle-menu:hover{
+        background-color: #f2f2f2;
+    }
+    .main-menu{
+        display: none;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        background-color: #fff;
+    }
+    .menu-item{
+        font-size: 21px;
+    }
+    .checkbtn{
+        position: fixed;
+        right: 3%;
+    }
+    #check:checked ~ ul{
+        display: flex;
+        flex-flow: column;
+        justify-content: right;
+        height: 100vh;
+        top: 85px;
+    }
+}
+
+/*Estilos Hero*/
+.hero-section{
+    height: 622px;
+    background: url(img/exteriorchevi1oscuro.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+    background-blend-mode: multiply;
+    padding-top: 85px;
+}
+
+.wrap-hero-section{
+    color: #FFF;
+    width: 500px;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 24px;
+}
+
+@media (min-width:880px){
+    .wrap-hero-section{
+        padding-left: 160px;
+        padding-right: 160px;
+        padding-top: 24px
+    }
+}
+
+@media (max-width:768px){
+    .wrap-hero-section{
+        display: flex;
+        flex-flow: column;
+        padding: 0%;
+        padding-left: 3%;
+        padding-bottom: 24px;
+        padding-top: 281px;
+        width: 450px;
+        
+    }
+    .hero-title{
+        font-size: 50px;
+    }
+    .hero-text{
+        font-size: 22px;
+    }
 }
