@@ -1,3 +1,5 @@
+/*Estilos Generales*/
+
 html *{
     margin: 0;
     padding: 0;
@@ -5,7 +7,21 @@ html *{
     scroll-behavior: smooth;
 }
 
-/*Estilos Generales*/
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: whitesmoke;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+  }
+
 p{
     font-size: 18px;
     font-style: normal;
@@ -69,9 +85,9 @@ h3{
     letter-spacing: -0.96px;
 }
 
-/*Estilos Header*/
+/*Header*/
+
 .header-landing{
-    display: flex;
     width: 100%;
     position: fixed;
     background-color: #FFF;
@@ -102,7 +118,7 @@ h3{
 
 .wrap-nav-header{
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 30%;
 }
 
 .main-menu{
@@ -184,7 +200,8 @@ h3{
     }
 }
 
-/*Estilos Hero*/
+/*Hero*/
+
 .hero-section{
     height: 622px;
     background: url(img/exteriorchevi1oscuro.webp);
@@ -229,4 +246,77 @@ h3{
     .hero-text{
         font-size: 22px;
     }
+}
+
+/*Logos brand*/
+
+.wrap-logos-section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.logo-brand{
+    width: 160px;
+    height: 160px;
+}
+
+@media (min-width:412px){
+    .wrap-logos-section{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .logo-brand{
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width:1236px){
+    .wrap-logos-section{
+        display: flex;
+        flex-flow: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 140px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .logo-brand{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/*Servicios*/
+
+.wrap-title-section{
+    display: flex;
+    justify-content: center;
+    padding-top: 164px;
+}
+
+.wrap-servicios-section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.item-sercivios-section{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 160px;
+    padding-right: 160px;
+    width: 288px;
+    height: 139px;
 }
