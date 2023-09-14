@@ -14,6 +14,7 @@ html *{
   
   *::-webkit-scrollbar-track {
     background: whitesmoke;
+    display: none;
   }
   
   *::-webkit-scrollbar-thumb {
@@ -91,6 +92,7 @@ h3{
     width: 100%;
     position: fixed;
     background-color: #FFF;
+    z-index: 99999;
 }
 
 .wrap-header{
@@ -135,6 +137,7 @@ h3{
 
 .menu-item:hover{
     color: #FCD437;
+    transition: all .3s;
 }
 
 .toggle-menu{
@@ -160,7 +163,7 @@ h3{
         position: fixed;
         height: 70px;
         width: 100%;
-        background-color: #FFF;
+        background-color: #ffffff;
     }
     .wrap-logo{
         position: fixed;
@@ -170,11 +173,6 @@ h3{
     .toggle-menu{
         cursor: pointer;
         display: flex;
-        background-color: #FFF;
-        border-radius: 12px;
-    }
-    .toggle-menu:hover{
-        background-color: #f2f2f2;
     }
     .main-menu{
         display: none;
@@ -182,7 +180,8 @@ h3{
         margin: 0;
         padding: 0;
         position: fixed;
-        background-color: #fff;
+        background-color: #ffffffe8;
+        backdrop-filter: blur(2px);
     }
     .menu-item{
         font-size: 21px;
@@ -237,7 +236,7 @@ h3{
         padding-left: 3%;
         padding-bottom: 24px;
         padding-top: 281px;
-        width: 450px;
+        width: auto;
         
     }
     .hero-title{
@@ -298,25 +297,115 @@ h3{
     }
 }
 
-/*Servicios*/
+/*Vehículos*/
+
+.sevicion-section{
+    padding-left: 160px;
+    padding-right: 160px;
+}
 
 .wrap-title-section{
     display: flex;
     justify-content: center;
     padding-top: 164px;
-}
-
-.wrap-servicios-section{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.item-sercivios-section{
-    padding-top: 24px;
     padding-bottom: 24px;
-    padding-left: 160px;
-    padding-right: 160px;
-    width: 288px;
-    height: 139px;
 }
+
+.modelo-card h3{
+    font-size: 25px;
+}
+
+.card{
+    flex: 1 0 auto;
+    scroll-snap-align: center;
+    position: relative;
+    max-width: 290px;
+    background: #f2f2f2;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #d7d7d7;
+    margin: 24px 24px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+article img:first-child{
+    object-fit: cover;
+    width: 100%;
+    margin: auto;
+}
+
+article img:last-child{
+    position: absolute;
+    margin: auto;
+    transform: translateX(-100%);
+    transition: .3 ease;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover{
+    transform: scale(1.1);
+}
+
+article:hover::before{
+    opacity: 1;
+}
+
+article:hover img:last-child{
+    opacity: 1;
+}
+
+article:hover img:first-child{
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.header-card{
+    width: 100%;
+}
+
+.categoria-card span{
+    background: #FCD437;
+    color: #FFF;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+}
+
+.modelo-card p{
+    padding-top: 10px;
+}
+
+.card footer{
+    padding: 10px;
+}
+
+.wrap-card{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+@media (max-width:768px){
+    .sevicion-section{
+        padding: 0px;
+    }
+    .wrap-title-section{
+        display: flex;
+        position: relative;
+        justify-content: left;
+        left: 3%;
+        padding-top: 64px;
+        padding-bottom: 24px;
+    }
+    .wrap-title-section h2{
+        font-size: 30px;
+    }
+    .wrap-card{
+        display: flex;
+        width: auto;
+        margin: 24px;
+    }
+}
+
+/* Nosotros */
