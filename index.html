@@ -23,16 +23,16 @@
                     <input type="checkbox" id="check">  
 
                     <ul class="main-menu">
-                        <li class="menu-item"><a href="/"></a>Vehículos</li>
-                        <li class="menu-item"><a href="/"></a>Nosotros</li>
-                        <li class="menu-item"><a href="/"></a>Contáctanos</li>
+                        <li class="menu-item"><a href="#servicion_section">Vehículos</a></li>
+                        <li class="menu-item"><a href="#nosotros_section">Nosotros</a></li>
+                        <li class="menu-item"><a href="#form_section">Contáctanos</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="hero-section">
+    <section id="hero_section" class="hero-section">
         <div class="wrap-hero-section">
             <h1 class="hero-title">Auto<br>Classic</h1>
             <h3 class="hero-text">Concesionario de vehículos de motor en Villa Constitución</h3>
@@ -52,7 +52,7 @@
         </div>
     </section>
     
-    <section class="section sevicion-section">
+    <section id="servicion_section" class="section sevicion-section">
         <div class="wrap-title-section">
             <h2>Descubrí tu próximo vehículo</h2>
         </div>
@@ -168,7 +168,7 @@
         </div>
     </section>
 
-    <section class="section two-column-section">
+    <section id="nosotros_section" class="section two-column-section">
         <div class="wrap-title-section">
             <h2>Características de nuestros Servicios</h2>
         </div>
@@ -190,7 +190,7 @@
         </div>
     </section>
 
-    <section class="section two-column-section">
+    <section id="form_section" class="section two-column-section">
         <div class="wrap-title-section">
             <h2>Formulario de Contacto</h2>
         </div>
@@ -199,13 +199,13 @@
             <div class="wrap-img_two-column">
                 <div class="wrap-text-column">
                     <h3>Contacta con nosotros</h3>
-                    <form action="procesar_formulario.php" method="post" class="form">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" id="nombre" required="">
+                    <form method="get" class="form">
+                        <label for="nombre">Nombre y apellido:</label>
+                        <input type="text" name="nombre" id="nombre" required="" autocomplete="off">
                         <br><br>
                         
                         <label for="asunto">Asunto:</label>
-                        <input type="text" name="asunto" id="asunto" required="">
+                        <input type="text" name="asunto" id="asunto" required="" autocomplete="off">
                         <br><br>
                         
                         <label for="mensaje">Mensaje:</label>
@@ -213,7 +213,7 @@
                         <textarea name="mensaje" id="mensaje" rows="4" cols="40" required=""></textarea>
                         <br><br>
                         
-                        <input type="submit" value="Enviar" class="cta-a">
+                        <input type="submit" id="send" value="Enviar" class="cta-a">
                     </form>
                 </div>
             </div>
@@ -229,18 +229,18 @@
             <div class="wrap-social-logo">
                 <ul>
                     <li>
-                        <a href="">
-                            <img src="/img/whatsapp.webp" alt="" class="social-logo">
+                        <a href="https://api.whatsapp.com/send?phone=543400658168&text=Hola👋, me gustaría adquirir un vehículo.">
+                            <img src="/img/brand-whatsapp.png" alt="" class="social-logo">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="/img/instagram.webp" alt="" class="social-logo">
+                        <a href="https://www.instagram.com/autoclassic.vc/?hl=es-la">
+                            <img src="/img/brand-instagram.png" alt="" class="social-logo">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="/img/facebook.webp" alt="" class="social-logo">
+                        <a href="https://www.facebook.com/vc.autoclassic?locale=ar_LA">
+                            <img src="/img/brand-facebook.png" alt="" class="social-logo">
                         </a>
                     </li>
                 </ul>
@@ -250,7 +250,7 @@
         <div class="menu-footer-section">
             <div class="wrap-menu-footer-section">
                 <ul>
-                    <li><a href="#"></a>Volver al inicio</li>
+                    <li><a href="#hero_section">Volver al inicio</a></li>
                 </ul>
             </div>
         </div>
@@ -262,4 +262,5 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
