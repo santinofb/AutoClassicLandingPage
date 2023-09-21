@@ -8,23 +8,24 @@ html *{
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
     height: 10px;
-  }
+}
   
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: whitesmoke;
     display: none;
-  }
+}
   
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 20px;
     border: 2px solid whitesmoke;
-  }
+}
 
 p{
     font-size: 18px;
@@ -167,6 +168,10 @@ section{
 }
 
 @media (max-width:768px){
+    .logo-header{
+        width: 81px;
+        height: 65px;
+    } 
     .wrap-header{
         position: fixed;
         height: 70px;
@@ -455,6 +460,59 @@ article:hover img:first-child{
     border-radius: 12px;
 }
 
+.overlay{
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 160px;
+    padding-right: 160px;
+    visibility: hidden;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.popup{
+    background: #f2f2f2;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    padding: 24px;
+    border-radius: 12px;
+    transition: all .3s ease;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.btn-cerrar-popup{
+    display: block;
+    text-align: right;
+    filter: invert(64%) sepia(0%) saturate(1%) hue-rotate(224deg) brightness(96%) contrast(88%);
+    transition: all .3s ease;
+}
+
+.btn-cerrar-popup img{
+    max-width: 24px;
+}
+
+.btn-cerrar-popup:hover{
+    filter: invert(0%) sepia(0%) saturate(14%) hue-rotate(210deg) brightness(91%) contrast(100%);
+}
+
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+    overflow-x:hidden;
+    overflow-y:auto;
+    max-height:600px;
+}
+
 @media (max-width:1236px){
     .wrap-two-column{
         display: grid;
@@ -477,9 +535,18 @@ article:hover img:first-child{
         padding: 24px;
         margin: 24px;
     }
+    .overlay{
+        padding: 24px;
+    }
 }
 
 /* Formulario */
+
+.wrap-text-column img{
+    max-width: 35px;
+    transform: translateY(5px);
+    filter: invert(88%) sepia(56%) saturate(4287%) hue-rotate(65deg) brightness(87%) contrast(89%);
+}
 
 .form input, .form textarea{
     display: flex;
@@ -524,7 +591,7 @@ input[type="submit"]{
 }
 
 .social-logo{
-    max-width: 50px;
+    max-width: 45px;
     width: 100%;
     margin: 24px;
     filter: invert(97%) sepia(7%) saturate(405%) hue-rotate(176deg) brightness(120%) contrast(100%);
