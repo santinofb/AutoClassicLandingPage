@@ -215,7 +215,7 @@ section{
 
 .hero-section{
     height: 622px;
-    background-image: url(/img/exteriorchevi1oscuro.webp);
+    background-image: url(../img/exteriorchevi1oscuro.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -335,6 +335,7 @@ section{
 }
 
 .modelo-card h3{
+    padding-top: 5px;
     font-size: 25px;
 }
 
