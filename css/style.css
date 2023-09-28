@@ -215,7 +215,7 @@ section{
 
 .hero-section{
     height: 622px;
-    background: url(/img/exteriorchevi1oscuro.webp);
+    background-image: url(/img/exteriorchevi1oscuro.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -424,7 +424,7 @@ article:hover img:first-child{
         padding-bottom: 24px;
     }
     .wrap-title-section h2{
-        font-size: 30px;
+        font-size: 28px;
     }
     .slide-content{
         margin: 0 10px;
@@ -563,6 +563,18 @@ article:hover img:first-child{
     }
     .overlay{
         padding: 24px;
+    }
+}
+
+@media (max-width:395px){
+    .wrap-img_two-column img{
+        width: 250px;
+    }
+}
+
+@media (max-width:345px){
+    .wrap-img_two-column img{
+        width: 200px;
     }
 }
 
