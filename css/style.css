@@ -8,7 +8,6 @@ html *{
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -405,17 +404,11 @@ article:hover img:first-child{
 }
 
 .swiper-navBtn{
-    filter: grayscale(100%);
     transition: all .3s ease;
 }
 
 .swiper-navBtn:hover{
-    filter: grayscale(0%);
     color: #FCDB59;
-}
-
-.swiper-pagination-bullet{
-    filter: grayscale(100%);
 }
 
 @media (max-width:768px){
