@@ -567,18 +567,6 @@ article:hover img:first-child{
     }
 }
 
-@media (max-width:395px){
-    .wrap-img_two-column img{
-        width: 250px;
-    }
-}
-
-@media (max-width:345px){
-    .wrap-img_two-column img{
-        width: 200px;
-    }
-}
-
 @media (max-width:435px){
     #nosotros_section .wrap-img_two-column img{
         border-radius: 50px 12px 12px 12px;
@@ -587,6 +575,23 @@ article:hover img:first-child{
         width: 300px;
         height: 315px;
         margin: auto;
+    }
+}
+
+@media (max-width:395px){
+    .wrap-img_two-column img{
+        width: 250px;
+    }
+    .popup iframe{
+        width: 251px;
+        height: 315px;
+        margin: auto;
+    }
+}
+
+@media (max-width:345px){
+    .wrap-img_two-column img{
+        width: 200px;
     }
 }
 
