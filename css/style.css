@@ -150,10 +150,32 @@ section{
 
 .toggle-menu{
     display: none;
+    flex-direction: column;
+    width: 30px;
+    border: 0;
+    background: transparent;
+    gap: 7px;
 }
 
-.toggle-menu img{
-    width: 40px;
+.toggle-menu > div{
+    background: black;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.toggle-menu:hover div:first-child{
+    transform: rotate(45deg);
+}
+
+.toggle-menu:hover div:nth-child(2){
+    opacity: 0;
+}
+
+.toggle-menu:hover div:last-child{
+    transform: rotate(-45deg);
 }
 
 #check{
@@ -192,7 +214,7 @@ section{
         margin: 0;
         padding: 0;
         position: fixed;
-        background-color: #ffffffe8;
+        background-color: #ffffffcb;
         backdrop-filter: blur(2px);
     }
     .menu-item{
@@ -200,7 +222,7 @@ section{
     }
     .checkbtn{
         position: fixed;
-        right: 3%;
+        right: 6%;
     }
     #check:checked ~ ul{
         display: flex;
