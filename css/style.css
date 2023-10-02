@@ -10,9 +10,18 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: #FFF;
+    transition: all .3s ease;
+}
+
+body.dark{
+    background-color: #272727;
+}
+
 *::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
 }
   
 *::-webkit-scrollbar-track {
@@ -23,7 +32,6 @@ html{
 *::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 20px;
-    border: 2px solid whitesmoke;
 }
 
 p{
@@ -31,10 +39,20 @@ p{
     font-style: normal;
     font-weight: 300;
     letter-spacing: -0.54px;
+    transition: color .3s ease;
+}
+
+body.dark p{
+    color: #FFF;
 }
 
 a{
     text-decoration: none;
+    transition: color .3s ease;
+}
+
+body.dark a{
+    color: #FFF;
 }
 
 ul, li, a{
@@ -81,6 +99,11 @@ h2{
     font-style: normal;
     font-weight: 600; 
     letter-spacing: -1.2px;
+    transition: color .3s ease;
+}
+
+body.dark h2{
+    color: #FFF;
 }
 
 h3{
@@ -88,6 +111,11 @@ h3{
     font-style: normal;
     font-weight: 400;
     letter-spacing: -0.96px;
+    transition: color .3s ease;
+}
+
+body.dark h3{
+    color: #FFF;
 }
 
 section{
@@ -101,6 +129,11 @@ section{
     position: fixed;
     background-color: #FFF;
     z-index: 99999;
+    transition: all .3s ease;
+}
+
+body.dark .header-landing{
+    background-color: #272727;
 }
 
 .wrap-header{
@@ -119,6 +152,10 @@ section{
     width: 91px;
     height: 75px;
 } 
+
+body.dark .logo-header{
+    filter: invert(59%) sepia(53%) saturate(346%) hue-rotate(357deg) brightness(91%) contrast(89%);
+}
 
 .nav-header{
     display: flex;
@@ -145,7 +182,38 @@ section{
 
 .menu-item a:hover{
     color: #FCD437;
-    transition: all .3s;
+    transition: all .3s ease;
+}
+
+#container {
+    background-color: #f8f8f8;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    box-shadow: inset 4px 4px 6px #cecece,
+                inset -4px -4px 6px #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: translateY(100%);
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    transform: scale(.7);
+    background-color: #FCD437;
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #fff;
+    transition: all .3s ease;
+}
+
+#container.active .toggle{
+    left: 20px;
+    background-color: #999999;
 }
 
 .toggle-menu{
@@ -164,6 +232,10 @@ section{
     border-radius: 5px;
     transition: all .5s;
     transform-origin: left;
+}
+
+body.dark .toggle-menu > div{
+    background: #FFF;
 }
 
 .toggle-menu:hover div:first-child{
@@ -198,6 +270,10 @@ section{
         height: 70px;
         width: 100%;
         background-color: #ffffff;
+        transition: all .3s ease;
+    }
+    body.dark .wrap-header{
+        background-color: #272727;
     }
     .wrap-logo{
         position: fixed;
@@ -216,9 +292,25 @@ section{
         position: fixed;
         background-color: #ffffffcb;
         backdrop-filter: blur(2px);
+        transition: all .3s ease;
+    }
+    body.dark .main-menu{
+        background-color: #272727d0;
     }
     .menu-item{
         font-size: 21px;
+    }
+    #container{
+        margin-left: 15px;
+        width: 50px;
+        height: 25px;
+    }
+    .toggle{
+        width: 25px;
+        height: 25px;
+    }
+    #container.active .toggle{
+        left: 25px;
     }
     .checkbtn{
         position: fixed;
@@ -296,6 +388,11 @@ section{
 .logo-brand{
     width: 160px;
     height: 160px;
+    transition: all .3s ease;
+}
+
+body.dark .logo-brand{
+    filter: saturate(25%);
 }
 
 @media (min-width:412px){
@@ -374,6 +471,12 @@ section{
     transition: all .3s ease;
 }
 
+body.dark .card{
+    background: #404040;
+    box-shadow: 0 0 12px #0f0f0f;
+    transition: all .3s ease;
+}
+
 article:hover{
     transform: scale(1.1);
 }
@@ -426,12 +529,24 @@ article:hover img:first-child{
     padding: 10px;
 }
 
-.swiper-navBtn{
-    transition: all .3s ease;
+body.dark .swiper-navBtn{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(278deg) brightness(103%) contrast(101%);
 }
 
 .swiper-navBtn:hover{
     color: #FCDB59;
+}
+
+body.dark .swiper-navBtn:hover{
+    filter: none;
+}
+
+body.dark .swiper-pagination-bullet{
+    background-color: #FFF;
+}
+
+body.dark .swiper-pagination-bullet-active{
+    background-color: #FCD437;
 }
 
 @media (max-width:768px){
@@ -470,6 +585,12 @@ article:hover img:first-child{
     background-color: #f2f2f2;
     padding: 24px;
     box-shadow: 0 0 12px #d7d7d7;
+    transition: all .3s ease;
+}
+
+body.dark .wrap-two-column{
+    background: #404040;
+    box-shadow: 0 0 12px #0f0f0f;
 }
 
 #nosotros_section .wrap-two-column{
@@ -528,6 +649,11 @@ article:hover img:first-child{
     transition: all .3s ease;
     transform: scale(0.7);
     opacity: 0;
+}
+
+body.dark .popup{
+    background: #272727;
+    border: 4px solid #404040;
 }
 
 .popup iframe{
@@ -642,6 +768,10 @@ article:hover img:first-child{
     resize:none
 }
 
+body.dark label{
+    color: #FFF;
+}
+
 input[type="submit"]{
     border: 0;
     display: inline;
@@ -695,6 +825,10 @@ input[type="submit"]{
 
 .footer-creds p{
     font-size: 15px;
+}
+
+body.dark .footer-creds p{
+    color: black;
 }
 
 .wrap-menu-footer-section a:hover{

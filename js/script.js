@@ -70,3 +70,9 @@ var swiper = new Swiper(".slide-content", {
     },
   }
 });
+
+const btnSwitch = document.querySelector('#container');
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
+});
