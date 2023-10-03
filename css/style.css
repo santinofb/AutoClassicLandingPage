@@ -148,13 +148,26 @@ body.dark .header-landing{
     flex-basis: 15%;
 }
 
-.logo-header{
+.wrap-logo img:first-child{
+    object-fit: cover;
     width: 91px;
     height: 75px;
-} 
+    transition: all .3s ease;
+}
 
-body.dark .logo-header{
-    filter: invert(59%) sepia(53%) saturate(346%) hue-rotate(357deg) brightness(91%) contrast(89%);
+.wrap-logo img:last-child{
+    height: 75px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+body.dark .wrap-logo img:first-child{
+    opacity: 0;
+}
+
+body.dark .wrap-logo img:last-child{
+    opacity: 1;
 }
 
 .nav-header{
@@ -261,10 +274,10 @@ body.dark .toggle-menu > div{
 }
 
 @media (max-width:768px){
-    .logo-header{
+    /* .logo-header{
         width: 81px;
         height: 65px;
-    } 
+    }  */
     .wrap-header{
         position: fixed;
         height: 70px;
