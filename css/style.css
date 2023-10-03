@@ -274,10 +274,6 @@ body.dark .toggle-menu > div{
 }
 
 @media (max-width:768px){
-    /* .logo-header{
-        width: 81px;
-        height: 65px;
-    }  */
     .wrap-header{
         position: fixed;
         height: 70px;
