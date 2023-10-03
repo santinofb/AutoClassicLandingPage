@@ -3,7 +3,7 @@ const enviarFormulario =() => {
         let nombre = document.getElementById('nombre').value;
         let asunto = document.getElementById('asunto').value;
         let mensaje = document.getElementById('mensaje').value;
-        let numero= 543400658168;
+        let numero= 543412095624;
 var win= window.open(`https://wa.me/${numero}?text=Hola,%20mi%20nombre%20es%20${nombre}.%20Asunto:%20${asunto}.%20${mensaje}`,'_blank');
 }
 evento.addEventListener('click', enviarFormulario)
@@ -75,4 +75,30 @@ const btnSwitch = document.querySelector('#container');
 btnSwitch.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   btnSwitch.classList.toggle('active');
+  if(document.body.classList.contains('dark')){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+if(localStorage.getItem('dark-mode') === 'true'){
+	document.body.classList.add('dark');
+	btnSwitch.classList.add('active');
+} else {
+	document.body.classList.remove('dark');
+	btnSwitch.classList.remove('active');
+}
+
+const checkbox = document.querySelector("#check"),
+      desmarcar = document.querySelector("#desmarcar");
+      desmarcar2 = document.querySelector("#desmarcar2");
+      desmarcar3 = document.querySelector("#desmarcar3");
+desmarcar.addEventListener("click", () => {
+  checkbox.checked = false;
+});
+desmarcar2.addEventListener("click", () => {
+  checkbox.checked = false;
+});
+desmarcar3.addEventListener("click", () => {
+  checkbox.checked = false;
 });
