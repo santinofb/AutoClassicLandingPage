@@ -118,6 +118,10 @@ body.dark h3{
     color: #FFF;
 }
 
+body.dark h4{
+    color: #FFF;
+}
+
 section{
     padding-bottom: 164px;
 }
@@ -267,13 +271,7 @@ body.dark .toggle-menu > div{
     display: none;
 }
 
-@media (min-width:880px){
-    .wrap-header{
-        padding: 8px 160px;
-    }
-}
-
-@media (max-width:768px){
+@media (max-width:959px){
     .wrap-header{
         position: fixed;
         height: 70px;
@@ -382,66 +380,13 @@ body.dark .toggle-menu > div{
     }
 }
 
-/*Logos brand*/
-
-.wrap-logos-section{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
-.logo-brand{
-    width: 160px;
-    height: 160px;
-    transition: all .3s ease;
-}
-
-body.dark .logo-brand{
-    filter: saturate(25%);
-}
-
-@media (min-width:412px){
-    .wrap-logos-section{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 150px;
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-    .logo-brand{
-        width: 160px;
-        height: 160px;
-    }
-}
-
-@media (max-width:1236px){
-    .wrap-logos-section{
-        display: flex;
-        flex-flow: wrap;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 140px;
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-    .logo-brand{
-        width: 120px;
-        height: 120px;
-    }
-}
-
 /*Vehículos*/
 
 .sevicion-section{
     padding-left: 160px;
     padding-right: 160px;
+    padding-top: 164px;
+    padding-bottom: 64px;
 }
 
 .wrap-title-section{
@@ -561,6 +506,7 @@ body.dark .swiper-pagination-bullet-active{
 @media (max-width:768px){
     .sevicion-section{
         padding: 0px;
+        padding-bottom: 24px;
     }
     .wrap-title-section{
         display: flex;
@@ -578,6 +524,86 @@ body.dark .swiper-pagination-bullet-active{
     }
     .swiper-navBtn{
         visibility: hidden;
+    }
+}
+
+/* Optimizadores */
+
+.optimizadores-section{
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.wrap-optimus{
+    display: grid;
+    grid-template-columns: 1fr 2.8fr;
+    background-image: url(../img/optimusswirl.jpg);
+    box-shadow: 0 0 12px #d7d7d7;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+body.dark .wrap-optimus{
+    box-shadow: 0 0 12px #0f0f0f;
+}
+
+.wrap-img_optimus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap-img_optimus img{
+    width: 250px;
+    max-height: 250px;
+}
+
+.wrap-text-optimus{
+    padding: 24px;
+    background-color: #f2f2f2;
+    border-radius: 0px 12px 12px 0px;
+    transition: all .3s ease;
+}
+
+body.dark .wrap-text-optimus{
+    background: #404040;
+}
+
+.wrap-text-optimus h3{
+    padding-bottom: 24px;
+}
+
+.wrap-text-optimus h4{
+    padding-bottom: 24px;
+}
+
+.wrap-text-optimus p{
+    padding-bottom: 24px
+}
+
+@media (max-width:845px){
+    .wrap-img_optimus img{
+        width: 200px;
+        max-height: 200px;
+    }
+}
+
+@media (max-width:768px){
+    .optimizadores-section{
+        padding: 0px;
+    }
+    .wrap-optimus{
+        margin: 24px;
+    }
+}
+
+@media (max-width:500px){
+    .wrap-optimus{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .wrap-text-optimus{
+        border-radius: 0px 0px 12px 12px;
     }
 }
 
