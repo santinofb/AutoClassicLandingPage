@@ -255,15 +255,15 @@ body.dark .toggle-menu > div{
     background: #FFF;
 }
 
-.toggle-menu:hover div:first-child{
+.toggle-menu.active div:first-child{
     transform: rotate(45deg);
 }
 
-.toggle-menu:hover div:nth-child(2){
+.toggle-menu.active div:nth-child(2){
     opacity: 0;
 }
 
-.toggle-menu:hover div:last-child{
+.toggle-menu.active div:last-child{
     transform: rotate(-45deg);
 }
 
@@ -581,6 +581,13 @@ body.dark .wrap-text-optimus{
     padding-bottom: 24px
 }
 
+.img-popup{
+    display: flex;
+    width: 560px;
+    height: 315px;
+    margin-left: 24px;
+}
+
 @media (max-width:845px){
     .wrap-img_optimus img{
         width: 200px;
@@ -719,6 +726,36 @@ body.dark .popup{
     max-height:600px;
 }
 
+@media (max-height:675px){
+    .popup.active{
+        max-height: 500px;
+    }
+}
+
+@media (max-height:575px){
+    .popup.active{
+        max-height: 400px;
+    }
+}
+
+@media (max-height:475px){
+    .popup.active{
+        max-height: 300px;
+    }
+}
+
+@media (max-height:375px){
+    .popup.active{
+        max-height: 200px;
+    }
+}
+
+@media (max-height:275px){
+    .popup.active{
+        max-height: 100px;
+    }
+}
+
 @media (max-width:1236px){
     .wrap-two-column{
         display: grid;
@@ -730,6 +767,11 @@ body.dark .popup{
     .popup iframe{
         width: 360px;
         height: 315px;
+        margin: auto;
+    }
+    .img-popup{
+        width: 360px;
+        height: 215px;
         margin: auto;
     }
     .popup h3{
@@ -756,7 +798,12 @@ body.dark .popup{
     }
     .popup iframe{
         width: 300px;
-        height: 315px;
+        height: 215px;
+        margin: auto;
+    }
+    .img-popup{
+        width: 300px;
+        height: auto;
         margin: auto;
     }
 }
@@ -768,6 +815,11 @@ body.dark .popup{
     .popup iframe{
         width: 251px;
         height: 315px;
+        margin: auto;
+    }
+    .img-popup{
+        width: 251px;
+        height: auto;
         margin: auto;
     }
 }

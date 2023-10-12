@@ -87,12 +87,13 @@ if(localStorage.getItem('dark-mode') === 'true'){
 } else {
 	document.body.classList.remove('dark');
 	btnSwitch.classList.remove('active');
-}
+};
 
 const checkbox = document.querySelector("#check"),
-      desmarcar = document.querySelector("#desmarcar");
-      desmarcar2 = document.querySelector("#desmarcar2");
-      desmarcar3 = document.querySelector("#desmarcar3");
+      desmarcar = document.querySelector("#desmarcar"),
+      desmarcar2 = document.querySelector("#desmarcar2"),
+      desmarcar3 = document.querySelector("#desmarcar3"),
+      togglemenu = document.querySelector("#toggle-menu");
 desmarcar.addEventListener("click", () => {
   checkbox.checked = false;
 });
@@ -101,6 +102,18 @@ desmarcar2.addEventListener("click", () => {
 });
 desmarcar3.addEventListener("click", () => {
   checkbox.checked = false;
+});
+togglemenu.addEventListener("click", () => {
+  togglemenu.classList.toggle('active');
+});
+desmarcar.addEventListener("click", () => {
+  togglemenu.classList.remove('active');
+});
+desmarcar2.addEventListener("click", () => {
+  togglemenu.classList.remove('active');
+});
+desmarcar3.addEventListener("click", () => {
+  togglemenu.classList.remove('active');
 });
 
 var btnAbrirPopup2 = document.getElementById('btn-abrir-popup2'),
