@@ -635,7 +635,7 @@ body.dark .wrap-two-column{
     box-shadow: 0 0 12px #0f0f0f;
 }
 
-#nosotros_section .wrap-two-column{
+#Nosotros .wrap-two-column{
     border-radius: 75px 0px 0px 75px;
 }
 
@@ -793,7 +793,7 @@ body.dark .popup{
 }
 
 @media (max-width:435px){
-    #nosotros_section .wrap-img_two-column img{
+    #Nosotros .wrap-img_two-column img{
         border-radius: 50px 12px 12px 12px;
     }
     .popup iframe{
@@ -832,7 +832,7 @@ body.dark .popup{
 
 /* Formulario */
 
-#form_section .wrap-two-column{
+#Contáctanos .wrap-two-column{
     border-radius: 0px 75px 75px 0px;
 }
 
@@ -869,7 +869,7 @@ input[type="submit"]{
 }
 
 @media (max-width:435px){
-    #form_section .form-logo img{
+    #Contáctanos .form-logo img{
         border-radius: 12px 12px 50px 12px;
     }
 }
