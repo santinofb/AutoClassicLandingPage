@@ -150,11 +150,11 @@ body.dark .header-landing{
     display: flex;
     align-items: center;
     flex-basis: 15%;
+    width: 90px;
 }
 
 .wrap-logo img:first-child{
     object-fit: cover;
-    width: 91px;
     height: 75px;
     transition: all .3s ease;
 }
@@ -285,7 +285,7 @@ body.dark .toggle-menu > div{
     .wrap-logo{
         position: fixed;
         top: 1%;
-        left: 3%;
+        left: 6%;
     }
     .toggle-menu{
         cursor: pointer;
@@ -510,9 +510,8 @@ body.dark .swiper-pagination-bullet-active{
     }
     .wrap-title-section{
         display: flex;
-        position: relative;
+        margin-left: 24px;
         justify-content: left;
-        left: 3%;
         padding-top: 64px;
         padding-bottom: 24px;
     }
