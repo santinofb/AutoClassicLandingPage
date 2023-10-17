@@ -119,12 +119,15 @@ desmarcar3.addEventListener("click", () => {
 var btnAbrirPopup2 = document.getElementById('btn-abrir-popup2'),
     overlay2 = document.getElementById('overlay2'),
     popup2 = document.getElementById('popup2'),
-    btnCerrarPopup2 = document.getElementById('btn-cerrar-popup2');
+    btnCerrarPopup2 = document.getElementById('btn-cerrar-popup2'),
+    iframe = document.getElementById('iframe');
 btnAbrirPopup2.addEventListener('click', function(){
   overlay2.classList.add('active');
   popup2.classList.add('active');
+  iframe.setAttribute('src', 'https://www.youtube.com/embed/yyS5th5ctg0?si=vmyUECXpmPVXwhtn');
 });
 btnCerrarPopup2.addEventListener('click', function(){
   overlay2.classList.remove('active');
   popup2.classList.remove('active');
+  iframe.removeAttribute('src');
 });
