@@ -285,7 +285,7 @@ body.dark .toggle-menu > div{
     .wrap-logo{
         position: fixed;
         top: 1%;
-        left: 6%;
+        left: 4%;
     }
     .toggle-menu{
         cursor: pointer;
@@ -415,9 +415,10 @@ body.dark .toggle-menu > div{
 .card{
     flex: 1 0 auto;
     scroll-snap-align: center;
-    position: relative;
+    /* position: relative; */
     max-width: 290px;
-    min-height: 280px;
+    min-width: 135px;
+    min-height: 290px;
     background: #f2f2f2;
     border-radius: 12px;
     box-shadow: 0 0 12px #d7d7d7;
@@ -511,6 +512,7 @@ body.dark .swiper-pagination-bullet-active{
     .wrap-title-section{
         display: flex;
         margin-left: 24px;
+        margin-right: 24px;
         justify-content: left;
         padding-top: 64px;
         padding-bottom: 24px;
